@@ -1,0 +1,141 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "make problem directory",
+      "command": "mkdir",
+      "args": [
+        "${workspaceFolder}/${input:problemName}",
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "create io files",
+      "command": "touch",
+      "args": [
+        "${workspaceFolder}/${input:problemName}/input",
+        "${workspaceFolder}/${input:problemName}/output",
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "copy template",
+      "command": "cp",
+      "args": [
+        "${workspaceFolder}/.vscode/template.cpp",
+        "${workspaceFolder}/${input:problemName}/main.cpp",
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "open in code",
+      "command": "code",
+      "args": [
+        "--reuse-window",
+        "${workspaceFolder}/${input:problemName}/main.cpp",
+        "${workspaceFolder}/${input:problemName}/input",
+        "${workspaceFolder}/${input:problemName}/output"
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "Create template",
+      "dependsOn": [
+        "make problem directory",
+        "create io files",
+        "copy template",
+        "open in code"
+      ],
+      "dependsOrder": "sequence",
+      "detail": "Make a folder and necessary files for cp problems and open them in vscode",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "echo running",
+      "command": "echo",
+      "args": [
+        "Running...",
+        ">",
+        "${fileDirname}/output",
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "compile",
+      "command": "g++",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${fileDirname}/main.cpp",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out",
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "run",
+      "command": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [
+        "<",
+        "${fileDirname}/input",
+        ">",
+        "${fileDirname}/output",
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "rm output file",
+      "command": "rm",
+      "args": [
+        "${fileDirname}/${fileBasenameNoExtension}.out",
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "C/C++: g++ build and run active file from io files",
+      "dependsOn": [
+        "echo running",
+        "compile",
+        "run",
+        "rm output file"
+      ],
+      "dependsOrder": "sequence",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "detail": "compiler: /usr/bin/g++",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+      },
+    }
+  ],
+  "inputs": [
+    {
+      "id": "problemName",
+      "type": "promptString",
+      "description": "What is the name of the problem?"
+    }
+  ]
+}
