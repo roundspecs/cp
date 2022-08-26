@@ -6,9 +6,9 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
+#define ll long long
+#define vi vector<int>
+#define pi pair<int, int>
 #define fos(i, start, stop) for (int i = start; i < stop; i++)
 #define fo(i, stop) fos(i, 0, stop)
 #define foss(i, start, stop, step) for (int i = start; i < stop; i += step)
