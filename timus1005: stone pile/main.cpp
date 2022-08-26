@@ -27,9 +27,8 @@ int main() {
   }
 
   int result = 0;
-  while (half_of_sum >= arr[length-1]) {
-    if (is_weight_possible(arr, 0, length, half_of_sum) == 1)
-      break;
+  while (half_of_sum >= arr[length - 1]) {
+    if (is_weight_possible(arr, 0, length, half_of_sum) == 1) break;
     half_of_sum--;
   }
   printf("%d", sum - 2 * half_of_sum);
@@ -37,10 +36,8 @@ int main() {
 
 int is_weight_possible(int *arr, int start, int length, int sum) {
   sum -= arr[start];
-  if (sum == 0)
-    return 1;
-  if (start == length)
-    return 0;
+  if (sum == 0) return 1;
+  if (start == length) return 0;
   if (sum < 0 || is_weight_possible(arr, start + 1, length, sum) == 0)
     return is_weight_possible(arr, start + 1, length, sum + arr[start]);
   return 1;
