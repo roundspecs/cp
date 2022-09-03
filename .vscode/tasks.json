@@ -79,7 +79,6 @@
       "args": [
         "-fdiagnostics-color=always",
         "-g",
-        "-std=c++20",
         "${fileDirname}/main.cpp",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}.out",

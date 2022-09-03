@@ -6,6 +6,7 @@ using namespace std;
 #define fo(i, n) for (int i = 0; i < n; i++)
 #define nn       "\n"
 #define mod      1000000007
+#define all(var) var.begin(), var.end()
 
 int main() {
 
