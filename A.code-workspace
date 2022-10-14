@@ -95,6 +95,7 @@
 			"typeinfo": "cpp",
 			"valarray": "cpp",
 			"variant": "cpp"
-		}
+		},
+		"task.allowAutomaticTasks": "off"
 	}
 }
