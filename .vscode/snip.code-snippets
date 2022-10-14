@@ -15,29 +15,29 @@
   // 	],
   // 	"description": "Log output to console"
   // }
-  "test case": {
+  "start template": {
     "scope": "c,cpp",
-    "prefix": "tc",
+    "prefix": "cp",
     "body": [
-      "int t;",
-      "cin >> t;",
-      "for(int tc = 1; tc <= t; tc += 1) solve(tc);",
-    ]
-  },
-  "solve func": {
-    "scope": "c,cpp",
-    "prefix": "sl",
-    "body": [
-      "void solve(int tc) {",
-      "  $1",
+      "#include <bits/stdc++.h>",
+      "#define fo(i, n) for (int i = 0; i < n; i++)",
+      "#define nn '\\n'",
+      "#define fast                                                                   \\",
+      "  ios_base::sync_with_stdio(0);                                                \\",
+      "  cin.tie(0)",
+      "typedef long long ll;",
+      "using namespace std;",
+      "",
+      "signed main() {",
+      "  fast;",
+      "  int t;",
+      "  cin >> t;",
+      "  while (t--) {",
+      "    $1",
+      "  done:",
+      "    cout << nn;",
+      "  }",
       "}"
     ]
-  },
-  "fo loop": {
-    "scope": "c,cpp",
-    "prefix": "fo",
-    "body": [
-      "for(int $1 = 0; $1 < $2; $1 += 1)",
-    ]
-  },
+  }
 }
