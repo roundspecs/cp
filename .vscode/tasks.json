@@ -14,8 +14,7 @@
       "label": "create io files",
       "command": "touch",
       "args": [
-        "${workspaceFolder}/${input:problemName}/input.txt",
-        "${workspaceFolder}/${input:problemName}/output.txt"
+        "${workspaceFolder}/${input:problemName}/input.txt"
       ]
     },
     {
@@ -34,8 +33,7 @@
       "args": [
         "--reuse-window",
         "${workspaceFolder}/${input:problemName}/main.cpp",
-        "${workspaceFolder}/${input:problemName}/input.txt",
-        "${workspaceFolder}/${input:problemName}/output.txt"
+        "${workspaceFolder}/${input:problemName}/input.txt"
       ]
     },
     {
@@ -69,7 +67,7 @@
       "args": [
         "Running...",
         ">",
-        "${fileDirname}/output.txt"
+        "output.txt"
       ],
       "presentation": {
         "echo": false,
@@ -87,7 +85,7 @@
       "args": [
         "Compiling...",
         ">",
-        "${fileDirname}/output.txt"
+        "output.txt"
       ],
       "presentation": {
         "echo": false,
@@ -127,7 +125,7 @@
         "<",
         "${fileDirname}/input.txt",
         ">",
-        "${fileDirname}/output.txt"
+        "output.txt"
       ],
       "presentation": {
         "echo": false,
