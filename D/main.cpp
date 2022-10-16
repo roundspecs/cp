@@ -8,7 +8,7 @@ signed main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
   int t = 1;
-  cin >> t;
+  // cin >> t;
   fo(tc, t) {
     lesgo(tc + 1);
     cout << '\n';
