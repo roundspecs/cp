@@ -124,8 +124,9 @@
       "args": [
         "<",
         "${fileDirname}/input.txt",
-        ">",
-        "output.txt"
+        "|&",
+        "tee",
+        "output.txt",
       ],
       "presentation": {
         "echo": false,
