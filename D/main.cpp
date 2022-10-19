@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 #define fo(i,n) for(int i=0;i<n;i++)
 #define nn '\n'
-#define vi vector<int>
-typedef long long ll;
 using namespace std;
+typedef long long ll;
+typedef vector<int> vi;
 void lesgo(int);
 
 signed main() {
