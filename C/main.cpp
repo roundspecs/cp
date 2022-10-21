@@ -5,11 +5,11 @@
 #define s second
 #define pb push_back
 #define mp make_pair
-#define N 100005
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int,int> pi;
+const int N = 2e10+5;
 void lesgo();
 int t=1,tc=0;
 
