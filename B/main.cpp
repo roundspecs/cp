@@ -9,7 +9,7 @@ using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int,int> pi;
-const int N = 2e10+5;
+const int N = 2e5+5;
 void lesgo();
 int t=1,tc=0;
 
