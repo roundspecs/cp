@@ -5,6 +5,7 @@
 #define s second
 #define pb push_back
 #define mp make_pair
+#define N 100005
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
