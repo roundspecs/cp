@@ -1,9 +1,14 @@
 #include <bits/stdc++.h>
 #define fo(i,n) for(int i=0;i<n;i++)
 #define nn '\n'
+#define f first
+#define s second
+#define pb push_back
+#define mp make_pair
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
+typedef pair<int,int> pi;
 void lesgo();
 int t=1,tc=0;
 
