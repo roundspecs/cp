@@ -11,7 +11,7 @@ typedef vector<int> vi;
 typedef pair<int,int> pi;
 const int N = 2e5+5;
 void lesgo();
-int t=1,tc=0;
+int t=1,tc;
 
 signed main() {
   ios_base::sync_with_stdio(0);
