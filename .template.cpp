@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
-#define fo(i,n) for(int i=0;i<n;i++)
+#define f(i,s,n) for(int i=s;i<n;i++)
 #define nn '\n'
+#define deb(x) cout<<#x<<' '<<x<<'\n';
 using namespace std;
 using ll=long long;
 using vi=vector<int>;
@@ -14,5 +15,5 @@ signed main() {
 }
 
 void lesgo() {
-  
+  int n,a,b;
 }
