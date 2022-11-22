@@ -8,12 +8,12 @@ using vi=vector<int>;
 void lesgo();
 int t=1,tc;
 
-signed main() {
+main() {
   ios_base::sync_with_stdio(0); cin.tie(0);
   cin>>t;
   while(tc++ < t) lesgo();
 }
 
 void lesgo() {
-  int n,a,b;
+  
 }
