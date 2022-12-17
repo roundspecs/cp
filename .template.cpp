@@ -1,7 +1,4 @@
 #include <bits/stdc++.h>
-#define f(i,s,n) for(int i=s;i<n;i++)
-#define nn '\n'
-#define deb(x) cout<<#x<<' '<<x<<'\n';
 using namespace std;
 using ll=long long;
 using vi=vector<int>;
