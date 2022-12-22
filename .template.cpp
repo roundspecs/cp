@@ -13,6 +13,6 @@ int32_t main() {
 	int t=1;
 	// cin>>t;
 	f(tc,1,t+1) {
-
+		
 	}
 }
