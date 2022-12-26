@@ -4,5 +4,34 @@
 			"path": "/home/roundspecs/Documents/cp/"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"array": "cpp",
+			"tuple": "cpp",
+			"variant": "cpp",
+			"*.tcc": "cpp",
+			"bitset": "cpp",
+			"charconv": "cpp",
+			"compare": "cpp",
+			"functional": "cpp",
+			"memory": "cpp",
+			"fstream": "cpp",
+			"future": "cpp",
+			"iomanip": "cpp",
+			"istream": "cpp",
+			"limits": "cpp",
+			"memory_resource": "cpp",
+			"ostream": "cpp",
+			"numeric": "cpp",
+			"ranges": "cpp",
+			"scoped_allocator": "cpp",
+			"shared_mutex": "cpp",
+			"spanstream": "cpp",
+			"sstream": "cpp",
+			"stop_token": "cpp",
+			"streambuf": "cpp",
+			"utility": "cpp",
+			"valarray": "cpp"
+		}
+	}
 }
