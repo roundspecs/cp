@@ -31,7 +31,11 @@
 			"stop_token": "cpp",
 			"streambuf": "cpp",
 			"utility": "cpp",
-			"valarray": "cpp"
+			"valarray": "cpp",
+			"cmath": "cpp",
+			"random": "cpp",
+			"regex": "cpp",
+			"type_traits": "cpp"
 		}
 	}
 }

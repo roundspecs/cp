@@ -1,19 +1,18 @@
-#include <bits/stdc++.h>
-#define f(i,s,n) for(int i=s;i<n;i++)
-#define nn '\n';
-#define all(x) begin(x),end(x)
+#include<bits/stdc++.h>
+bool I;
+int TC,T=1;
 using namespace std;
 using ll=long long;
 using vi=vector<int>;
-int nxt(){int x;cin>>x;return x;}
-int tc,t=1;
+#define all(x) begin(x),end(x)
+#define F(i,s,n) I=(s)>(n);for(auto i=(s)-I;i!=(n)-I;I?i--:i++)
 
 void lesgo() {
-
+    
 }
 
 int32_t main() {
 	ios_base::sync_with_stdio(0); cin.tie(0);
-	cin>>t;
-	while(tc++ < t) lesgo();
+	cin>>T;
+	while(TC++ < T) lesgo();
 }
