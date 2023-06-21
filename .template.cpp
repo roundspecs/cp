@@ -1,8 +1,8 @@
 /**
  * @file template.cpp
- * @author roundspeccs (roundspecs@pm.me)
+ * @author roundspecs (roundspecs@pm.me)
  * @brief Template for competitive programming
- * @version 0.1
+ * @version 0.2
  */
 
 #include <bits/stdc++.h>
