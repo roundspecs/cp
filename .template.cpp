@@ -2,14 +2,13 @@
  * @file template.cpp
  * @author roundspecs (roundspecs@pm.me)
  * @brief Template for competitive programming
- * @version 0.2
+ * @version 1.0
  */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
+  cin.tie(0)->sync_with_stdio(0);
   
 }
