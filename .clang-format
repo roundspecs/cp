@@ -1,11 +1,11 @@
 ﻿---
 BasedOnStyle: LLVM
-TabWidth: 4
-IndentWidth: 4
+TabWidth: 2
+IndentWidth: 2
 UseTab: ForIndentation
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortBlocksOnASingleLine: Always
-AllowShortFunctionsOnASingleLine: All
+AllowShortFunctionsOnASingleLine: None
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 SpacesBeforeTrailingComments: 2
