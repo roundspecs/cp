@@ -10,8 +10,5 @@ using namespace std;
 
 int main() {
   cin.tie(0)->sync_with_stdio(0);
-	vector<int> a = {1,2,3,3};
-
-	// int a[] = {1,2,3,3};
-	deb(a);
+  
 }
