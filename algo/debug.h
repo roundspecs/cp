@@ -21,9 +21,9 @@ void __printwithdelim(T x, string delim=" ") {
 
 template <typename TupleT, std::size_t... Is>
 void printTupleImp(const TupleT& tp, std::index_sequence<Is...>) {
-    size_t index = 0;
+    size_t index = max({Is...});
     cout << "(";
-    (__printwithdelim(std::get<Is>(tp)), ...);
+    (__printwithdelim(std::get<Is>(tp), (index-->0 ? ",":"")), ...);
     cout << ")";
 }
 
@@ -46,10 +46,11 @@ void __print(const TupleT& tp) {
 	{                                                                            \
 		string _N = #F;                                                            \
 		cout << "L" << __LINE__ << ": " << _N.substr(0, _N.find('.'))              \
-		     << " = [";                                                             \
+		     << " = [";                                                            \
 		for (auto _ = F; _ != L; _++) {                                            \
-			__print(*_);                                                             \
-			cout << ' ';                                                             \
+			auto __ = _; __++;                                                       \
+			if(__==L) __print(*_);                                                   \
+			else __printwithdelim(*_,",");                                           \
 		}                                                                          \
 		cout << "]\n";                                                             \
 	}
