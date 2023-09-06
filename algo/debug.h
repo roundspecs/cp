@@ -1,11 +1,16 @@
-void __PRINT(int X)         { cout << X; };
-void __PRINT(double X)      { cout << X; };
-void __PRINT(long long X)   { cout << X; };
-void __PRINT(long double X) { cout << X; };
-void __PRINT(string X)      { cout << '"' << X << '"'; };
-void __PRINT(const char* X) { __PRINT(string(X)); };
-void __PRINT(char X)        { cout << '\'' << X << '\''; };
-void __PRINT(bool X)        { cout << (X?'T':'F'); };
+void __PRINT(int X)                  { cout << X; };
+void __PRINT(unsigned int X)         { cout << X; };
+void __PRINT(float X)                { cout << X; };
+void __PRINT(double X)               { cout << X; };
+void __PRINT(long X)                 { cout << X; };
+void __PRINT(unsigned long X)        { cout << X; };
+void __PRINT(long long X)            { cout << X; };
+void __PRINT(unsigned long long X)   { cout << X; };
+void __PRINT(long double X)          { cout << X; };
+void __PRINT(string X)               { cout << '"' << X << '"'; };
+void __PRINT(const char* X)          { __PRINT(string(X)); };
+void __PRINT(char X)                 { cout << '\'' << X << '\''; };
+void __PRINT(bool X)                 { cout << (X?'T':'F'); };
 template <typename T1, typename T2> void __PRINT(pair<T1, T2> X) {
 	cout << '(';
 	__PRINT(X.first);
