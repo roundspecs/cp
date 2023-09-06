@@ -1,56 +1,56 @@
-void __print(int x)         { cout << x; };
-void __print(double x)      { cout << x; };
-void __print(long long x)   { cout << x; };
-void __print(long double x) { cout << x; };
-void __print(string x)      { cout << '"' << x << '"'; };
-void __print(const char* x) { __print(string(x)); };
-void __print(char x)        { cout << '\'' << x << '\''; };
-void __print(bool x)        { cout << (x?'T':'F'); };
-template <typename T1, typename T2> void __print(pair<T1, T2> x) {
+void __PRINT(int X)         { cout << X; };
+void __PRINT(double X)      { cout << X; };
+void __PRINT(long long X)   { cout << X; };
+void __PRINT(long double X) { cout << X; };
+void __PRINT(string X)      { cout << '"' << X << '"'; };
+void __PRINT(const char* X) { __PRINT(string(X)); };
+void __PRINT(char X)        { cout << '\'' << X << '\''; };
+void __PRINT(bool X)        { cout << (X?'T':'F'); };
+template <typename T1, typename T2> void __PRINT(pair<T1, T2> X) {
 	cout << '(';
-	__print(x.first);
+	__PRINT(X.first);
 	cout << ',';
-	__print(x.second);
+	__PRINT(X.second);
 	cout << ')';
 };
 template <typename T>
-void __printwithdelim(T x, string delim=" ") {
-	__print(x);
-	cout<<delim;
+void __PRINTWITHDELIM(T X, string DELIM=" ") {
+	__PRINT(x);
+	cout<<DELIM;
 }
 
 template <typename TupleT, std::size_t... Is>
 void printTupleImp(const TupleT& tp, std::index_sequence<Is...>) {
-    size_t index = max({Is...});
+    size_t INDEX = max({Is...});
     cout << "(";
-    (__printwithdelim(std::get<Is>(tp), (index-->0 ? ",":"")), ...);
+    (__PRINTWITHDELIM(std::get<Is>(tp), (INDEX-->0 ? ",":"")), ...);
     cout << ")";
 }
 
 template <typename TupleT, std::size_t TupSize = std::tuple_size_v<TupleT>>
-void __print(const TupleT& tp) {
+void __PRINT(const TupleT& tp) {
     printTupleImp(tp, std::make_index_sequence<TupSize>{});
 }
 
 #define GET_MACRO(_1, _2, NAME, ...) NAME
-#define deb(...) GET_MACRO(__VA_ARGS__, deb2, deb1)(__VA_ARGS__)
+#define deb(...) GET_MACRO(__VA_ARGS__, DEB2, DEB1)(__VA_ARGS__)
 
-#define deb1(X)                                                                \
+#define DEB1(X)                                                                \
 	{                                                                            \
 		auto _X = (X);                                                             \
 		cout << "L" << __LINE__ << ": " << #X << " = ";                            \
-		__print(_X);                                                               \
+		__PRINT(_X);                                                               \
 		cout << '\n';                                                              \
 	}
-#define deb2(F, L)                                                             \
+#define DEB2(F, L)                                                             \
 	{                                                                            \
-		string _N = #F;                                                            \
-		cout << "L" << __LINE__ << ": " << _N.substr(0, _N.find('.'))              \
+		string _S = #F;                                                            \
+		cout << "L" << __LINE__ << ": " << _S.substr(0, _S.find('.'))              \
 		     << " = [";                                                            \
 		for (auto _ = F; _ != L; _++) {                                            \
 			auto __ = _; __++;                                                       \
-			if(__==L) __print(*_);                                                   \
-			else __printwithdelim(*_,",");                                           \
+			if(__==L) __PRINT(*_);                                                   \
+			else __PRINTWITHDELIM(*_,",");                                           \
 		}                                                                          \
 		cout << "]\n";                                                             \
 	}
