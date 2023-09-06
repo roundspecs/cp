@@ -13,21 +13,27 @@ template <typename T1, typename T2> void __print(pair<T1, T2> x) {
 	__print(x.second);
 	cout << ')';
 };
-template <typename T> void __print(vector<T> x) {
-	for (T i : x) {
-		__print(i);
-		cout << ' ';
-	}
-}
-template <typename T> void __print(set<T> x) {
-	for (T i : x) {
-		__print(i);
-		cout << ' ';
-	}
+template <typename T>
+void __printwithdelim(T x, string delim=" ") {
+	__print(x);
+	cout<<delim;
 }
 
-#define GET_MACRO(_1, _2, _3, NAME, ...) NAME
-#define deb(...) GET_MACRO(__VA_ARGS__, deb1, deb2)(__VA_ARGS__)
+template <typename TupleT, std::size_t... Is>
+void printTupleImp(const TupleT& tp, std::index_sequence<Is...>) {
+    size_t index = 0;
+    cout << "(";
+    (__printwithdelim(std::get<Is>(tp)), ...);
+    cout << ")";
+}
+
+template <typename TupleT, std::size_t TupSize = std::tuple_size_v<TupleT>>
+void __print(const TupleT& tp) {
+    printTupleImp(tp, std::make_index_sequence<TupSize>{});
+}
+
+#define GET_MACRO(_1, _2, NAME, ...) NAME
+#define deb(...) GET_MACRO(__VA_ARGS__, deb2, deb1)(__VA_ARGS__)
 
 #define deb1(X)                                                                \
 	{                                                                            \
@@ -40,10 +46,10 @@ template <typename T> void __print(set<T> x) {
 	{                                                                            \
 		string _N = #F;                                                            \
 		cout << "L" << __LINE__ << ": " << _N.substr(0, _N.find('.'))              \
-		     << " = ";                                                             \
+		     << " = [";                                                             \
 		for (auto _ = F; _ != L; _++) {                                            \
 			__print(*_);                                                             \
 			cout << ' ';                                                             \
 		}                                                                          \
-		cout << '\n';                                                              \
+		cout << "]\n";                                                             \
 	}
