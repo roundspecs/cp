@@ -11,7 +11,8 @@ void __PRINT(string X)               { cout << '"' << X << '"'; };
 void __PRINT(const char* X)          { __PRINT(string(X)); };
 void __PRINT(char X)                 { cout << '\'' << X << '\''; };
 void __PRINT(bool X)                 { cout << (X?'T':'F'); };
-template <typename T1, typename T2> void __PRINT(pair<T1, T2> X) {
+template <typename T1, typename T2>
+void __PRINT(pair<T1, T2> X) {
 	cout << '(';
 	__PRINT(X.first);
 	cout << ',';
@@ -40,22 +41,20 @@ void __PRINT(const TupleT& tp) {
 #define GET_MACRO(_1, _2, NAME, ...) NAME
 #define deb(...) GET_MACRO(__VA_ARGS__, DEB2, DEB1)(__VA_ARGS__)
 
-#define DEB1(X)                                                                \
-	{                                                                            \
-		auto _X = (X);                                                             \
-		cout << "L" << __LINE__ << ": " << #X << " = ";                            \
-		__PRINT(_X);                                                               \
-		cout << '\n';                                                              \
-	}
-#define DEB2(F, L)                                                             \
-	{                                                                            \
-		string _S = #F;                                                            \
-		cout << "L" << __LINE__ << ": " << _S.substr(0, _S.find('.'))              \
-		     << " = [";                                                            \
-		for (auto _ = F; _ != L; _++) {                                            \
-			auto __ = _; __++;                                                       \
-			if(__==L) __PRINT(*_);                                                   \
-			else __PRINTWITHDELIM(*_,",");                                           \
-		}                                                                          \
-		cout << "]\n";                                                             \
-	}
+#define DEB1(X) {                                                            \
+	auto _X = (X);                                                             \
+	cout << "L" << __LINE__ << ": " << #X << " = ";                            \
+	__PRINT(_X);                                                               \
+	cout << '\n';                                                              \
+}
+
+#define DEB2(F, L) {                                                         \
+	string _S = #F;                                                            \
+	cout << "L" << __LINE__ << ": " << _S.substr(0, _S.find('.')) << " = [";   \
+	for (auto _ = F; _ != L; _++) {                                            \
+		auto __ = _; __++;                                                       \
+		if(__==L) __PRINT(*_);                                                   \
+		else __PRINTWITHDELIM(*_,",");                                           \
+	}                                                                          \
+	cout << "]\n";                                                             \
+}
