@@ -20,7 +20,7 @@ template <typename T1, typename T2> void __PRINT(pair<T1, T2> X) {
 };
 template <typename T>
 void __PRINTWITHDELIM(T X, string DELIM=" ") {
-	__PRINT(x);
+	__PRINT(X);
 	cout<<DELIM;
 }
 
