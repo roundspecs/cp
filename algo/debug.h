@@ -1,36 +1,36 @@
-void __PRINT(int X)                  { cout << X; };
-void __PRINT(unsigned int X)         { cout << X; };
-void __PRINT(float X)                { cout << X; };
-void __PRINT(double X)               { cout << X; };
-void __PRINT(long X)                 { cout << X; };
-void __PRINT(unsigned long X)        { cout << X; };
-void __PRINT(long long X)            { cout << X; };
-void __PRINT(unsigned long long X)   { cout << X; };
-void __PRINT(long double X)          { cout << X; };
-void __PRINT(string X)               { cout << '"' << X << '"'; };
+void __PRINT(int X)                  { cerr << X; };
+void __PRINT(unsigned int X)         { cerr << X; };
+void __PRINT(float X)                { cerr << X; };
+void __PRINT(double X)               { cerr << X; };
+void __PRINT(long X)                 { cerr << X; };
+void __PRINT(unsigned long X)        { cerr << X; };
+void __PRINT(long long X)            { cerr << X; };
+void __PRINT(unsigned long long X)   { cerr << X; };
+void __PRINT(long double X)          { cerr << X; };
+void __PRINT(string X)               { cerr << '"' << X << '"'; };
 void __PRINT(const char* X)          { __PRINT(string(X)); };
-void __PRINT(char X)                 { cout << '\'' << X << '\''; };
-void __PRINT(bool X)                 { cout << (X?'T':'F'); };
+void __PRINT(char X)                 { cerr << '\'' << X << '\''; };
+void __PRINT(bool X)                 { cerr << (X?'T':'F'); };
 template <typename T1, typename T2>
 void __PRINT(pair<T1, T2> X) {
-  cout << '(';
+  cerr << '(';
   __PRINT(X.first);
-  cout << ',';
+  cerr << ',';
   __PRINT(X.second);
-  cout << ')';
+  cerr << ')';
 };
 template <typename T>
 void __PRINTWITHDELIM(T X, string DELIM=" ") {
   __PRINT(X);
-  cout<<DELIM;
+  cerr<<DELIM;
 }
 
 template <typename TupleT, std::size_t... Is>
 void printTupleImp(const TupleT& tp, std::index_sequence<Is...>) {
     size_t INDEX = max({Is...});
-    cout << "(";
+    cerr << "(";
     (__PRINTWITHDELIM(std::get<Is>(tp), (INDEX-->0 ? ",":"")), ...);
-    cout << ")";
+    cerr << ")";
 }
 
 template <typename TupleT, std::size_t TupSize = std::tuple_size_v<TupleT>>
@@ -42,7 +42,7 @@ template<typename _RandomAccessIterator>
 void __PRINTCONTAINER(_RandomAccessIterator F, _RandomAccessIterator L, bool INDEX=false) {
   size_t index=0;
   for (auto it = F; it != L; it++) {
-    if(INDEX) cout<<index<<':';
+    if(INDEX) cerr<<index<<':';
     auto nxt = it; nxt++;
     if(nxt==L) __PRINT(*it);
     else __PRINTWITHDELIM(*it,",");
@@ -55,21 +55,21 @@ void __PRINTCONTAINER(_RandomAccessIterator F, _RandomAccessIterator L, bool IND
 
 #define DEB1(X) {                                                            \
   auto _X = (X);                                                             \
-  cout << "L" << __LINE__ << ": " << #X << " = ";                            \
+  cerr << "L" << __LINE__ << ": " << #X << " = ";                            \
   __PRINT(_X);                                                               \
-  cout << '\n';                                                              \
+  cerr << '\n';                                                              \
 }
 
 #define DEB2(F, L) {                                                         \
   string _S = #F;                                                            \
-  cout << "L" << __LINE__ << ": " << _S.substr(0, _S.find('.')) << " = [";   \
+  cerr << "L" << __LINE__ << ": " << _S.substr(0, _S.find('.')) << " = [";   \
   __PRINTCONTAINER(F,L);                                                     \
-  cout << "]\n";                                                             \
+  cerr << "]\n";                                                             \
 }
 
 #define DEB3(F, L, INDEX) {                                                         \
   string _S = #F;                                                            \
-  cout << "L" << __LINE__ << ": " << _S.substr(0, _S.find('.')) << " = [";   \
+  cerr << "L" << __LINE__ << ": " << _S.substr(0, _S.find('.')) << " = [";   \
   __PRINTCONTAINER(F,L,INDEX);                                                     \
-  cout << "]\n";                                                             \
+  cerr << "]\n";                                                             \
 }
