@@ -7,8 +7,8 @@
 using namespace std;
 
 #ifdef LOCAL
-#include "algo/debug.h"
 // #define cerr cout
+#include "algo/debug.h"
 #else
 #define deb(...)  122
 #endif

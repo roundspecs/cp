@@ -1,14 +1,14 @@
 /**
- * @file template.cpp
- * @author roundspecs
+ * DP:
+ * - ready goes with dp
  */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 #ifdef LOCAL
-#include "algo/debug.h"
 // #define cerr cout
+#include "algo/debug.h"
 #else
 #define deb(...)  122
 #endif
