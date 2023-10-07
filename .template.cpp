@@ -1,6 +1,8 @@
 /**
  * DP:
  * - ready goes with dp
+ * BITMASK:
+ * - x = a ^ b ^ x
  */
 
 #include <bits/stdc++.h>
