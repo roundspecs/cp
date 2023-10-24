@@ -4,6 +4,10 @@
     "*.tcc": "cpp",
     "forward_list": "cpp",
     "list": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "concepts": "cpp",
+    "string_view": "cpp",
+    "ranges": "cpp",
+    "span": "cpp"
   }
 }

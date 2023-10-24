@@ -23,15 +23,14 @@ int main() {
   cin.tie(0)->sync_with_stdio(0);
   int n; cin>>n;
   string s; cin>>s;
-  sort(s.begin(), s.end());
-  map<string,int> m;
+  ranges::sort(s);
+  int ans=0;
   for(long long i=0; i<3162278; i++) {
     string x = to_string(i*i);
     if(x.size()>n) break;
-    sort(x.begin(),x.end());
-    string y(n-x.size(), '0');
-    y+=x;
-    m[y]++;
+    x.resize(n, '0');
+    ranges::sort(x);
+    ans+=(x==s);
   }
-  cout<<m[s]<<'\n';
+  cout<<ans<<'\n';
 }
