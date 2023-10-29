@@ -1,12 +1,9 @@
 /**
- * DP:
- * - ready goes with dp
- * BITMASK:
- * - x = a ^ b ^ x
- * GRAPH:
- * - use vis
- * STYLE:
- * - use {} even for 1 line
+ * DP: ready goes with dp
+ * BITMASK: x = a ^ b ^ x
+ * GRAPH: use vis
+ * STYLE: use {} even for 1 line
+ * EXIT: exit(0);
  */
 
 #include <bits/stdc++.h>
