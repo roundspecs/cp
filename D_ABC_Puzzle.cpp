@@ -19,12 +19,11 @@ using namespace std;
 #define deb(...)  122
 #endif
 
-string s[5];
+string grid[5];
 vector<string> abcs;
 bool a[5]={}, b[5]={}, c[5]={};
 int n;
 string R,C;
-bool done=false;
 
 bool ok(string abc) {
   for(int i=0; i<n; i++) {
@@ -39,8 +38,8 @@ string left() {
   string x;
   for(int i=0; i<n; i++) {
     int j=0;
-    while(s[i][j]=='.') j++;
-    x.push_back(s[i][j]);
+    while(grid[i][j]=='.') j++;
+    x.push_back(grid[i][j]);
   }
   return x;
 }
@@ -49,32 +48,25 @@ string top() {
   string x;
   for(int i=0; i<n; i++) {
     int j=0;
-    while(s[j][i]=='.') j++;
-    x.push_back(s[j][i]);
+    while(grid[j][i]=='.') j++;
+    x.push_back(grid[j][i]);
   }
   return x;
 }
 
 void recur(int i) {
   if(i==n) {
-    if(!done && top()==C && left()==R) {
+    if(top()==C && left()==R) {
       cout<<"Yes\n";
       for(int j=0; j<n; j++) {
-        for(int k=0; k<n; k++) {
-          cout<<s[j][k];
-        }
-        cout<<"\n";
+        cout<<grid[j]<<"\n";
       }
-      // cout<<"LEFT: ";
-      // cout<<left()<<"\n";
-      // cout<<"TOP: ";
-      // cout<<top()<<"\n";
-      done=true;
+      exit(0);
     }
   }
   for(string abc: abcs) {
     if(ok(abc)) {
-      s[i]=abc;
+      grid[i]=abc;
       for(int j=0; j<n; j++) {
         if(abc[j]=='A') a[j]=1;
         else if(abc[j]=='B') b[j]=1;
@@ -96,23 +88,14 @@ int main() {
   cin>>n;
   cin>>R>>C;
   for(int i=0; i<n; i++) {
-    s[i]=string(n, '.');
+    grid[i]=string(n, '.');
   }
-  for(int a=0; a<n-2; a++) {
-    for(int b=a+1; b<n-1; b++) {
-      for(int c=b+1; c<n; c++) {
-        string y(n, '.');
-        for(string x: {"ABC", "ACB", "BAC", "BCA", "CAB", "CBA"}) {
-          y[a] = x[0];
-          y[b] = x[1];
-          y[c] = x[2];
-          abcs.push_back(y);
-        }
-      }
-    }
-  }
-  // deb(abcs.begin(), abcs.end());
-  // deb(abcs.size());
+  string x="ABC";
+  for(int i=3; i<n; i++) x.push_back('.');
+  ranges::sort(x);
+  do {
+    abcs.push_back(x);
+  } while(next_permutation(x.begin(),x.end()));
   recur(0);
-  if(!done) cout<<"No\n";
+  cout<<"No\n";
 }

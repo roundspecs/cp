@@ -23,6 +23,6 @@ int main() {
   cin.tie(0)->sync_with_stdio(0);
   cin.exceptions(cin.failbit);
   int x,y; cin>>x>>y;
-  if(x<y && y-x<3 || x>y && x-y<4) cout<<"Yes\n";
+  if(-3 <= y-x && y-x<=2) cout<<"Yes\n";
   else cout<<"No\n";
 }

@@ -25,9 +25,8 @@ int main() {
   int n; cin>>n;
   while(1) {
     int a = n/100;
-    int b = n/10 - a*10;
-    int c = n - a*100 - b*10;
-    // cout<<a<<b<<c<<"\n";
+    int b = n/10%10;
+    int c = n%10;
     if(a*b==c) return cout<<n,0;
     n++;
   }
