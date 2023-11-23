@@ -13,8 +13,6 @@ using namespace std;
 #ifdef LOCAL
 #define cerr cout
 #include "algo/debug.h"
-#else
-#define deb(...)  122
 #endif
 
 int main() {
