@@ -1,5 +1,6 @@
 # Advices
 
+- Don't rush
 - DP: ready goes with dp
 - BITMASK: x = a ^ b ^ x
 - GRAPH: use vis
