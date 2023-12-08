@@ -9,6 +9,7 @@
 - EXIT: exit(0);
 
 # Learning resources
+- [ ] [Sorting](/resources/sorting.md)
 - [ ] [Binary Search](/resources/binary_search.md)
 
 # CSES Progress
@@ -33,8 +34,19 @@
     - [ ] 3.1.3 Estimating Efﬁciency
     - [ ] 3.1.4 Formal Deﬁnitions
   - [ ] 3.2 Algorithm Design Examples
-    - [ ] 3.2.1 Maximum Subarray Sum
+    - [x] 3.2.1 Maximum Subarray Sum
     - [ ] 3.2.2 Two Queens Problem
-  - [ ] 3.3 Code Optimization
-    - [ ] 3.3.1 Compiler Output
-    - [ ] 3.3.2 Processor Features27
+- [ ] 4 Sorting and Searching
+  - [ ] 4.1 Sorting Algorithms
+    - [ ] 4.1.1 Bubble Sort
+    - [ ] 4.1.2 Merge Sort
+    - [ ] 4.1.3 Sorting Lower Bound
+    - [ ] 4.1.4 Counting Sort
+    - [ ] 4.1.5 Sorting in Practice
+  - [ ] 4.2 Solving Problems by Sorting
+    - [ ] 4.2.1 Sweep Line Algorithms
+    - [ ] 4.2.2 Scheduling Events
+    - [ ] 4.2.3 Tasks and Deadlines
+  - [ ] 4.3 Binary Search
+    - [ ] 4.3.1 Implementing the Search
+    - [ ] 4.3.2 Finding Optimal Solutions43
