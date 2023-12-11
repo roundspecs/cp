@@ -1,5 +1,4 @@
 # Advices
-
 - Don't rush
 - DP: ready goes with dp
 - BITMASK: x = a ^ b ^ x
@@ -38,8 +37,8 @@
     - [ ] 3.2.2 Two Queens Problem
 - [ ] 4 Sorting and Searching
   - [ ] 4.1 Sorting Algorithms
-    - [ ] 4.1.1 Bubble Sort
-    - [ ] 4.1.2 Merge Sort
+    - [x] 4.1.1 Bubble Sort
+    - [x] 4.1.2 Merge Sort
     - [ ] 4.1.3 Sorting Lower Bound
     - [ ] 4.1.4 Counting Sort
     - [ ] 4.1.5 Sorting in Practice
@@ -49,4 +48,76 @@
     - [ ] 4.2.3 Tasks and Deadlines
   - [ ] 4.3 Binary Search
     - [ ] 4.3.1 Implementing the Search
-    - [ ] 4.3.2 Finding Optimal Solutions43
+    - [ ] 4.3.2 Finding Optimal Solutions
+
+# PAPS Progress
+- [ ] 2 Programming in C++
+  - [ ] 2.1 Development Environments
+  - [ ] 2.1.2 Ubuntu
+  - [ ] 2.1.4 Installing the C++ tools
+  - [ ] 2.2 Hello World!
+  - [ ] 2.3 Variables and Types
+  - [ ] 2.4 Input and Output
+  - [ ] 2.5 Operators
+  - [ ] 2.6 If Statements
+  - [ ] 2.7 For Loops
+  - [ ] 2.8 While Loops
+  - [ ] 2.9 Functions
+  - [ ] 2.10 Structures
+  - [ ] 2.11 Arrays
+  - [ ] 2.12 The Preprocessor
+  - [ ] 2.13 Template
+  - [ ] 2.14 Additional Exercises
+  - [ ] 2.15 Chapter Notes
+ 
+- [ ] 3 The C++ Standard Library
+  - [ ] 3.1 vector
+  - [ ] 3.1.1 Iterators
+  - [ ] 3.2 queue
+  - [ ] 3.3 stack
+  - [ ] 3.4 priority_queue
+  - [ ] 3.5 set and map
+  - [ ] 3.6 Math
+  - [ ] 3.7 Algorithms
+  - [ ] 3.7.1 Sorting
+  - [ ] 3.7.2 Searching
+  - [ ] 3.7.3 Permutations
+  - [ ] 3.8 Strings
+  - [ ] 3.8.1 Conversions
+  - [ ] 3.9 Input/Output
+  - [ ] 3.9.1 Detecting End of File
+  - [ ] 3.9.2 Input Line by Line
+  - [ ] 3.9.3 Output Decimal Precision
+  - [ ] 3.10 Additional Exercises
+  - [ ] 3.11 Chapter Notes
+
+- [ ] 4 Implementation Problems
+  - [ ] 4.1 Additional Exercises
+  - [ ] 4.2 Chapter Notes
+
+- [ ] 6 Foundational Data Structures
+  - [ ] 6.1 Dynamic Arrays 103
+  - [ ] 6.2 Stacks 109
+  - [ ] 6.3 Queues 109
+  - [ ] 6.4 Graphs 111
+  - [ ] 6.4.1 Adjacency Matrices 111
+  - [ ] 6.4.2 Adjacency Lists 113
+  - [ ] 6.4.3 Adjacency Maps 113
+  - [ ] 6.5 Priority Queues 114
+  - [ ] 6.5.1 Binary Trees 115
+  - [ ] 6.5.2 Heaps 116
+  - [ ] 6.6 Chapter Notes 120
+
+- [ ] 7 Brute Force
+  - [ ] 7.1 Optimization Problems 123
+  - [ ] 7.2 Generate and Test 124
+  - [ ] 7.3 Backtracking 128
+  - [ ] 7.4 Fixing Parameters 135
+  - [ ] 7.5 Meet in the Middle 138
+  - [ ] 7.6 Chapter Notes 140
+
+- [ ] 8 Greedy Algorithms
+  - [ ] 8.1 Optimal Substructure 141
+  - [ ] 8.2 Locally Optimal Choices 143
+  - [ ] 8.3 Scheduling 145
+  - [ ] 8.4 Chapter Notes 148
