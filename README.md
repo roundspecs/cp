@@ -51,45 +51,25 @@
     - [ ] 4.3.2 Finding Optimal Solutions
 
 # PAPS Progress
-- [ ] 2 Programming in C++
-  - [ ] 2.1 Development Environments
-  - [ ] 2.1.2 Ubuntu
-  - [ ] 2.1.4 Installing the C++ tools
-  - [ ] 2.2 Hello World!
-  - [ ] 2.3 Variables and Types
-  - [ ] 2.4 Input and Output
-  - [ ] 2.5 Operators
-  - [ ] 2.6 If Statements
-  - [ ] 2.7 For Loops
-  - [ ] 2.8 While Loops
-  - [ ] 2.9 Functions
-  - [ ] 2.10 Structures
-  - [ ] 2.11 Arrays
-  - [ ] 2.12 The Preprocessor
-  - [ ] 2.13 Template
-  - [ ] 2.14 Additional Exercises
-  - [ ] 2.15 Chapter Notes
- 
 - [ ] 3 The C++ Standard Library
-  - [ ] 3.1 vector
-  - [ ] 3.1.1 Iterators
-  - [ ] 3.2 queue
-  - [ ] 3.3 stack
+  - [x] 3.1 vector
+    - [x] 3.1.1 Iterators
+  - [x] 3.2 queue
+  - [x] 3.3 stack
   - [ ] 3.4 priority_queue
-  - [ ] 3.5 set and map
-  - [ ] 3.6 Math
-  - [ ] 3.7 Algorithms
-  - [ ] 3.7.1 Sorting
-  - [ ] 3.7.2 Searching
-  - [ ] 3.7.3 Permutations
-  - [ ] 3.8 Strings
-  - [ ] 3.8.1 Conversions
+  - [x] 3.5 set and map
+  - [x] 3.6 Math
+  - [x] 3.7 Algorithms
+    - [x] 3.7.1 Sorting
+    - [x] 3.7.2 Searching
+    - [x] 3.7.3 Permutations
+  - [x] 3.8 Strings
+    - [x] 3.8.1 Conversions
   - [ ] 3.9 Input/Output
-  - [ ] 3.9.1 Detecting End of File
-  - [ ] 3.9.2 Input Line by Line
-  - [ ] 3.9.3 Output Decimal Precision
+    - [ ] 3.9.1 Detecting End of File
+    - [ ] 3.9.2 Input Line by Line
+    - [ ] 3.9.3 Output Decimal Precision
   - [ ] 3.10 Additional Exercises
-  - [ ] 3.11 Chapter Notes
 
 - [ ] 4 Implementation Problems
   - [ ] 4.1 Additional Exercises
