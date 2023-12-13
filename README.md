@@ -71,9 +71,15 @@
     - [ ] 3.9.3 Output Decimal Precision
   - [ ] 3.10 Additional Exercises
 
-- [ ] 4 Implementation Problems
-  - [ ] 4.1 Additional Exercises
-  - [ ] 4.2 Chapter Notes
+- [ ] 5 Time Complexity
+  - [x] 5.1 The Complexity of Insertion Sort
+  - [ ] 5.2 Asymptotic Notation
+  - [ ] 5.2.1 Amortized Complexity
+  - [ ] 5.3 NP-complete problems
+  - [ ] 5.4 Other Types of Complexities
+  - [ ] 5.5 The Importance of Constant Factors
+  - [ ] 5.6 Additional Exercises
+  - [ ] 5.7 Chapter Notes
 
 - [ ] 6 Foundational Data Structures
   - [ ] 6.1 Dynamic Arrays 103
@@ -101,3 +107,23 @@
   - [ ] 8.2 Locally Optimal Choices 143
   - [ ] 8.3 Scheduling 145
   - [ ] 8.4 Chapter Notes 148
+
+# CLRS Progress
+- [ ] I Foundations
+  - [x] 1 The Role of Algorithms in Computing
+    - [x] 1.1 Algorithms
+    - [x] 1.2 Algorithms as a technology
+  - [ ] 2 Getting Started
+    - [x] 2.1 Insertion sort
+    - [x] 2.2 Analyzing algorithms
+    - [ ] 2.3 Designing algorithms
+  - [ ] 3 Characterizing Running Times
+    - [ ] 3.1 O-notation, Ω-notation, and Θ-notation
+    - [ ] 3.2 Asymptotic notation: formal deﬁnitions
+    - [ ] 3.3 Standard notations and common functions
+  - [ ] 4 Divide-and-Conquer
+    - [ ] 4.1 Multiplying square matrices
+    - [ ] 4.2 Strassen’s algorithm for matrix multiplication
+    - [ ] 4.3 The substitution method for solving recurrences
+    - [ ] 4.4 The recursion-tree method for solving recurrences
+    - [ ] 4.5 The master method for solving recurrences
