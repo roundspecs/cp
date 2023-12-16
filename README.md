@@ -28,9 +28,9 @@
     - [ ] 2.3.2 Representing Sets
 - [ ] 3 Efﬁciency
   - [ ] 3.1 Time Complexity
-    - [ ] 3.1.1 Calculation Rules
-    - [ ] 3.1.2 Common Time Complexities
-    - [ ] 3.1.3 Estimating Efﬁciency
+    - [x] 3.1.1 Calculation Rules
+    - [x] 3.1.2 Common Time Complexities
+    - [x] 3.1.3 Estimating Efﬁciency
     - [ ] 3.1.4 Formal Deﬁnitions
   - [ ] 3.2 Algorithm Design Examples
     - [x] 3.2.1 Maximum Subarray Sum
