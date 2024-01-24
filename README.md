@@ -73,18 +73,18 @@
 
 - [ ] 5 Time Complexity
   - [x] 5.1 The Complexity of Insertion Sort
-  - [ ] 5.2 Asymptotic Notation
+  - [x] 5.2 Asymptotic Notation
   - [ ] 5.2.1 Amortized Complexity
-  - [ ] 5.3 NP-complete problems
+  - [x] 5.3 NP-complete problems
   - [ ] 5.4 Other Types of Complexities
   - [ ] 5.5 The Importance of Constant Factors
   - [ ] 5.6 Additional Exercises
   - [ ] 5.7 Chapter Notes
 
 - [ ] 6 Foundational Data Structures
-  - [ ] 6.1 Dynamic Arrays 103
-  - [ ] 6.2 Stacks 109
-  - [ ] 6.3 Queues 109
+  - [x] 6.1 Dynamic Arrays 103
+  - [x] 6.2 Stacks 109
+  - [x] 6.3 Queues 109
   - [ ] 6.4 Graphs 111
   - [ ] 6.4.1 Adjacency Matrices 111
   - [ ] 6.4.2 Adjacency Lists 113
@@ -107,6 +107,13 @@
   - [ ] 8.2 Locally Optimal Choices 143
   - [ ] 8.3 Scheduling 145
   - [ ] 8.4 Chapter Notes 148
+
+- [ ] A Discrete Mathematics
+  - [x] A.1 Logic
+  - [x] A.2 Sets and Sequences
+  - [x] A.3 Sums and Products
+  - [x] A.4 Graphs
+  - [ ] A.5 Chapter Notes
 
 # CLRS Progress
 - [ ] I Foundations
