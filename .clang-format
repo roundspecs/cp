@@ -1,0 +1,13 @@
+---
+BasedOnStyle: LLVM
+TabWidth: 4
+IndentWidth: 4
+UseTab: ForIndentation
+AllowShortBlocksOnASingleLine: Always
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: All
+SpacesBeforeTrailingComments: 2
+BreakBeforeBraces: Custom
+BraceWrapping:
+  BeforeElse: true
+...
