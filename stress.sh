@@ -1,6 +1,6 @@
 g++ stress.cpp -o stress.out
 ./stress.out > input.txt
-g++ fast.cpp -o fast.out 
-g++ slow.cpp -o slow.out 
-./fast.out < input.txt > fast.txt
-./slow.out < input.txt > slow.txt
+g++ good.cpp -o good.out 
+g++ bad.cpp -o bad.out 
+./good.out < input.txt > good.txt
+./bad.out < input.txt > bad.txt
