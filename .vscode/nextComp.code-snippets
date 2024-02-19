@@ -1,0 +1,26 @@
+{
+    "Next Comp with Monotonic Stack": {
+        "prefix": "nxtcomp",
+        "body": [
+            "template <typename T>",
+            "vector<int> nextComp(vector<T> v, function<bool(T, T)> comp) {",
+            "    int n = v.size();",
+            "    stack<int> pending;",
+            "    vector<int> ans(n);",
+            "    for (int i = 0; i < n; i++) {",
+            "        while (!pending.empty() && comp(v[i], v[pending.top()])) {",
+            "            ans[pending.top()] = i;",
+            "            pending.pop();",
+            "        }",
+            "        pending.push(i);",
+            "    }",
+            "    while (!pending.empty()) {",
+            "        ans[pending.top()] = n;",
+            "        pending.pop();",
+            "    }",
+            "    return ans;",
+            "}"
+        ],
+        "description": "Next Comp with Monotonic Stack"
+    }
+}
