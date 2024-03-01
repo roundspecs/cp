@@ -39,5 +39,6 @@
     "typeindex": "cpp",
     "utility": "cpp",
     "valarray": "cpp"
-  }
+  },
+  "editor.detectIndentation": false
 }
