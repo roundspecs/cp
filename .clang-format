@@ -4,6 +4,9 @@ TabWidth: 4
 IndentWidth: 4
 AllowShortBlocksOnASingleLine: Always
 AllowShortFunctionsOnASingleLine: None
+AlwaysBreakTemplateDeclarations: Yes  # For older versions (depricated)
+BreakTemplateDeclarations: Yes        # For newer versions
+SpaceAfterTemplateKeyword: false
 AllowShortLambdasOnASingleLine: All
 SpacesBeforeTrailingComments: 2
 BreakBeforeBraces: Custom
